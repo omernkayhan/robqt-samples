@@ -1,9 +1,9 @@
 /*
- * ROBQT Örnek Kod
- * TB6612FNG Örnek Uygulaması
- * by DISQET Yazılım Tasarım ve Otomasyon Teknolojileri
- * created by: Ömer Necmi KAYHAN
- */
+   ROBQT Örnek Kod
+   TB6612FNG Örnek Uygulaması
+   by DISQET Yazılım Tasarım ve Otomasyon Teknolojileri
+   created by: Ömer Necmi KAYHAN
+*/
 
 #define PWMA 3
 #define AIN1 4
@@ -13,7 +13,7 @@
 #define BIN1 7
 #define BIN2 8
 
-void sur(int motorADegeri, int motorBDegeri){
+void sur(int motorADegeri, int motorBDegeri) {
 
     motorADegeri = constrain(motorADegeri, -255, 255);  //Değer Kontrolü değerler -255 ile 255 arasında değilse bu aralığa uyarlanır
     motorBDegeri = constrain(motorBDegeri, -255, 255);  //Değer Kontrolü değerler -255 ile 255 arasında değilse bu aralığa uyarlanır
@@ -28,19 +28,19 @@ void sur(int motorADegeri, int motorBDegeri){
 
 }
 
-void setup(){
+void setup() {
 
     //ÇIKIŞLARI AYARLAMA
-    pinMode(PWM1, OUTPUT);
+    pinMode(PWMA, OUTPUT);
     pinMode(AIN1, OUTPUT);
     pinMode(AIN2, OUTPUT);
-    pinMode(PWM2, OUTPUT);
+    pinMode(PWMB, OUTPUT);
     pinMode(BIN1, OUTPUT);
     pinMode(BIN2, OUTPUT);
 
 }
 
-void loop(){
+void loop() {
 
     sur(100, 100);      //İKİ MOTOR 100 HIZINDA İLERİ
     delay(2000);        //2 SANİYE BEKLE

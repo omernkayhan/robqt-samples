@@ -7,11 +7,13 @@
 
 #define PWMA 3
 #define AIN1 4
-#define AIN2 5
+#define AIN2 10
 
 #define PWMB 6
 #define BIN1 7
-#define BIN2 8
+#define BIN2 11
+
+#define EN 5
 
 void sur(int motorADegeri, int motorBDegeri) {
 
@@ -37,6 +39,9 @@ void setup() {
     pinMode(PWMB, OUTPUT);
     pinMode(BIN1, OUTPUT);
     pinMode(BIN2, OUTPUT);
+    pinMode(EN, OUTPUT);
+
+    digitalWrite(EN, HIGH);         //Sürücünün çalışabilmesi için EN girişi HIGH yapılır
 
 }
 
